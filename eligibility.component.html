@@ -1,0 +1,82 @@
+<div class="first">
+
+<div class="form-style-10">
+    <h1>Apply Loan<span>..We are here to support you..</span></h1>
+
+    <form #loanForm="ngForm" (ngSubmit)="saveData()">
+        <div class="section"><span>1</span>Vehicle Details</div>
+        <div class="inner-wrap">
+            <!-- <label for="carmake">Car-Make<textarea name="carmake" [(ngModel)]="vehicle.carmake" required></textarea></label> -->
+            <label for="carmake">Car Make 
+                <select name="carmake" id="cars" [(ngModel)]="vehicle.carmake" required>
+                    <option value="default"></option>
+                    <option value="Maruthi">Maruthi</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Wolkswagon">Wolkswagon</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Kia">Kia</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                </select>
+            </label>
+            <!-- <label for="vehicletypr">Car-Type<textarea name="vehiceltype" [(ngModel)]="vehicle.vehiceltype" required></textarea></label> -->
+            <label for="vehicletype">Car Model 
+                <!-- <label for="vehicletype" id="cars">Car Model<input type="text" name="vehicletype" [(ngModel)]="vehicle.vehicletype" required /></label> -->
+                <select name="vehicletype" id="cars" [(ngModel)]="vehicle.vehicletype" required>
+                    <option value="default"></option>
+                    <option value="Brezza">Brezza</option>
+                    <option value="Ertiga">Ertiga</option>
+                    <option value="City">City</option>
+                    <option value="Amaze">Amaze</option>
+                    <option value="Harrier">Harrier</option>
+                    <option value="Nexon">Nexon</option>
+                    <option value="i20">i20</option>
+                    <option value="Verna">Verna</option>
+                    <option value="Polo">Polo</option>
+                    <option value="Vento">Vento</option>
+                    <option value="Micra">Micra</option>
+                    <option value="Venue">Venue</option>
+                    <option value="Seltos">Seltos</option>
+                    <option value="Carnival">Carnival</option>
+                    <option value="X1">X1</option>
+                    <option value="X7">X7</option>
+                    <option value="Q2">Q2</option>
+                    <option value="RS5">RS5</option>
+                </select>
+            </label>
+            <label for="exshowroomprice">Ex-Showroom Price <input type="number" name="exshowroomprice" [(ngModel)]="vehicle.exshowroomprice" required  min="300000" max="2500000" /></label>
+            <label for="vehicleprice">On-Road Price<input type="number" name="vehicleprice" [(ngModel)]="vehicle.vehicleprice" required min="300000" max="2500000"/></label>
+        </div>
+    
+        <div class="section"><span>2</span>Applicant Details</div>
+        <div class="inner-wrap">
+            <label for="firstname">Name <input type="text" name="firstname" [(ngModel)]="user.firstname" required minlength="4"/></label>
+
+
+            <label for="age">Age<input type="text" name="age" [(ngModel)]="user.age" required  maxlength="2"/></label>
+            <label for="gender">Gender<input type="text" name="gender" [(ngModel)]="user.gender" required/></label>
+            <label for="employementtype">Type of Employment<input type="text" name="employementtype" [(ngModel)]="elig.employementtype" required/></label>
+            <label for="annualsalary">Yearly Salary<input type="number" name="annualsalary" [(ngModel)]="elig.annualsalary" required min="100000" max="3000000"/></label>
+            <label for="existingemi">Existing EMI<input type="text" name="yes_no" checked [(ngModel)]="elig.existingemi" required minlength="2"/></label>
+        </div>
+    
+        <div class="section"><span>3</span>Contact Details</div>
+            <div class="inner-wrap">
+            <label for="phone">Mobile Number <input type="text" name="phone" [(ngModel)]="user.phone" required pattern="^[6-9]\d{9}$"/></label>
+            <label for="email">E-Mail <input type="email" name="email" [(ngModel)]="user.email" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" /></label>
+        </div>
+        <div class="button-section">
+            <button type="submit" value="Eligibility"class="bt" [disabled]="!loanForm.valid"  >Check Eligibility </button>
+         <!-- <input type="submit" name="Sign Up"/> -->
+         <span class="privacy-policy">
+             <button type="submit" value="" ></button>
+         <!-- <input type="checkbox" name="field7">You agree to our Terms and Policy.  -->
+         </span>
+        </div>
+    </form>
+
+</div>
+</div>
+
